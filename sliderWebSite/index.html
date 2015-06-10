@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>码隆科技</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slideshow.css"/>
+    <script src="js/snap.svg-min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo">码隆科技</div>
+        <nav>
+            <ul>
+                <li class="clickable" onclick="navTo(0)">首页</li>
+                <li>|</li>
+                <li class="clickable" onclick="navTo(1)">产品</li>
+                <li>|</li>
+                <li class="clickable" onclick="navTo(2)">大事件</li>
+                <li>|</li>
+                <li class="clickable" onclick="navTo(3)">关于我们</li>
+            </ul>
+        </nav>
+    </header>
+    <div id="slideshow" class="slideshow">
+        <ul class="sliderItems">
+            <li>
+                <div class="slide">
+                    <img class="icon imgP0face" src="img/face.png"/>
+                    <img class="icon imgP0circuit" src="img/circuit.png"/>
+
+                    <div class="textP0">
+                        <h1>Deeper Visual Intelligence</h1>
+
+                        <p>专注于图像领域的人工智能技术</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="slide">
+                    <img class="icon imgP1Pro" src="img/Product@2x.jpg" alt="Heart Icon"/>
+                    <img class="icon imgP1Links" src="img/links.png" alt="Heart Icon"/>
+
+                    <div class="textP1"><h1>产品</h1>
+
+                        <p>Style AI | <span class="introduce">让美丽有理有据</span></p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="slide">
+                    <div class="textP1"><h1>大事件</h1>
+
+                        <p>。。。</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="slide">
+                    <div class="textP1"><h1>关于我们</h1>
+
+                        <p>。。。</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        Copyright © 2015 码隆科技
+    </footer>
+</div>
+<!-- /container -->
+<script src="js/classie.js"></script>
+<script src="js/sliderFx.js"></script>
+<script>
+    var mainSlider = new SliderFx(document.getElementById('slideshow'), {
+            easing: 'cubic-bezier(.8,0,.2,1)'
+        });
+
+    var text = document.querySelector('.textP0');
+    text.className = 'textP0 fadeInBottom';
+    function navTo(src){
+        mainSlider._navigate(src);
+    }
+</script>
+</body>
+</html>
